@@ -14,3 +14,4 @@ echo/*
 *.ntvs*
 *.njsproj
 *.sln
+*.iml
