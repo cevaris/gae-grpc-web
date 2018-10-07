@@ -5,6 +5,9 @@ backend/index.html
 npm-debug.log
 yarn-error.log
 
+echo/*
+!echo/*.proto
+
 # Editor directories and files
 .idea
 *.suo
