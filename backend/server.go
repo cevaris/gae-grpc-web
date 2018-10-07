@@ -8,8 +8,8 @@ import (
 
 	"golang.org/x/net/context"
 
+	"github.com/cevaris/gae-grpc-web/echo"
 	"github.com/improbable-eng/grpc-web/go/grpcweb"
-	"github.com/k2wanko/gae-grpc-web/echo"
 	"github.com/k2wanko/gaegrpc"
 	"google.golang.org/appengine/log"
 )

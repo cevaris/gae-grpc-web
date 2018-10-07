@@ -1,6 +1,8 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {messageConventions} JS Compiler reports an error if a variable or
+ *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
@@ -56,10 +58,11 @@ proto.net.k2lab.test.grpc.testing.echo.EchoRequest.prototype.toObject = function
  *     http://goto/soy-param-migration
  * @param {!proto.net.k2lab.test.grpc.testing.echo.EchoRequest} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.net.k2lab.test.grpc.testing.echo.EchoRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    message: msg.getMessage()
+    message: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -110,35 +113,26 @@ proto.net.k2lab.test.grpc.testing.echo.EchoRequest.deserializeBinaryFromReader =
 
 
 /**
- * Class method variant: serializes the given message to binary data
- * (in protobuf wire format), writing to the given BinaryWriter.
- * @param {!proto.net.k2lab.test.grpc.testing.echo.EchoRequest} message
- * @param {!jspb.BinaryWriter} writer
- */
-proto.net.k2lab.test.grpc.testing.echo.EchoRequest.serializeBinaryToWriter = function(message, writer) {
-  message.serializeBinaryToWriter(writer);
-};
-
-
-/**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
 proto.net.k2lab.test.grpc.testing.echo.EchoRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  this.serializeBinaryToWriter(writer);
+  proto.net.k2lab.test.grpc.testing.echo.EchoRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
 
 /**
- * Serializes the message to binary data (in protobuf wire format),
- * writing to the given BinaryWriter.
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.net.k2lab.test.grpc.testing.echo.EchoRequest} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.net.k2lab.test.grpc.testing.echo.EchoRequest.prototype.serializeBinaryToWriter = function (writer) {
+proto.net.k2lab.test.grpc.testing.echo.EchoRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = this.getMessage();
+  f = message.getMessage();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -149,26 +143,17 @@ proto.net.k2lab.test.grpc.testing.echo.EchoRequest.prototype.serializeBinaryToWr
 
 
 /**
- * Creates a deep clone of this proto. No data is shared with the original.
- * @return {!proto.net.k2lab.test.grpc.testing.echo.EchoRequest} The clone.
- */
-proto.net.k2lab.test.grpc.testing.echo.EchoRequest.prototype.cloneMessage = function() {
-  return /** @type {!proto.net.k2lab.test.grpc.testing.echo.EchoRequest} */ (jspb.Message.cloneMessage(this));
-};
-
-
-/**
  * optional string message = 1;
  * @return {string}
  */
 proto.net.k2lab.test.grpc.testing.echo.EchoRequest.prototype.getMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldProto3(this, 1, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
-/** @param {string} value  */
+/** @param {string} value */
 proto.net.k2lab.test.grpc.testing.echo.EchoRequest.prototype.setMessage = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -215,12 +200,13 @@ proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.toObject = function(opt_in
  *     http://goto/soy-param-migration
  * @param {!proto.net.k2lab.test.grpc.testing.echo.Echo} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.net.k2lab.test.grpc.testing.echo.Echo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: msg.getId(),
-    message: msg.getMessage(),
-    created: msg.getCreated()
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    message: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    created: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -279,49 +265,40 @@ proto.net.k2lab.test.grpc.testing.echo.Echo.deserializeBinaryFromReader = functi
 
 
 /**
- * Class method variant: serializes the given message to binary data
- * (in protobuf wire format), writing to the given BinaryWriter.
- * @param {!proto.net.k2lab.test.grpc.testing.echo.Echo} message
- * @param {!jspb.BinaryWriter} writer
- */
-proto.net.k2lab.test.grpc.testing.echo.Echo.serializeBinaryToWriter = function(message, writer) {
-  message.serializeBinaryToWriter(writer);
-};
-
-
-/**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
 proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  this.serializeBinaryToWriter(writer);
+  proto.net.k2lab.test.grpc.testing.echo.Echo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
 
 /**
- * Serializes the message to binary data (in protobuf wire format),
- * writing to the given BinaryWriter.
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.net.k2lab.test.grpc.testing.echo.Echo} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.serializeBinaryToWriter = function (writer) {
+proto.net.k2lab.test.grpc.testing.echo.Echo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = this.getId();
+  f = message.getId();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = this.getMessage();
+  f = message.getMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = this.getCreated();
+  f = message.getCreated();
   if (f !== 0) {
     writer.writeInt64(
       3,
@@ -332,26 +309,17 @@ proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.serializeBinaryToWriter = 
 
 
 /**
- * Creates a deep clone of this proto. No data is shared with the original.
- * @return {!proto.net.k2lab.test.grpc.testing.echo.Echo} The clone.
- */
-proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.cloneMessage = function() {
-  return /** @type {!proto.net.k2lab.test.grpc.testing.echo.Echo} */ (jspb.Message.cloneMessage(this));
-};
-
-
-/**
  * optional string id = 1;
  * @return {string}
  */
 proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.getId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldProto3(this, 1, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
-/** @param {string} value  */
+/** @param {string} value */
 proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.setId = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -360,13 +328,13 @@ proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.setId = function(value) {
  * @return {string}
  */
 proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.getMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldProto3(this, 2, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
-/** @param {string} value  */
+/** @param {string} value */
 proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.setMessage = function(value) {
-  jspb.Message.setField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -375,13 +343,13 @@ proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.setMessage = function(valu
  * @return {number}
  */
 proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.getCreated = function() {
-  return /** @type {number} */ (jspb.Message.getFieldProto3(this, 3, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
-/** @param {number} value  */
+/** @param {number} value */
 proto.net.k2lab.test.grpc.testing.echo.Echo.prototype.setCreated = function(value) {
-  jspb.Message.setField(this, 3, value);
+  jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -428,6 +396,7 @@ proto.net.k2lab.test.grpc.testing.echo.EchoResponse.prototype.toObject = functio
  *     http://goto/soy-param-migration
  * @param {!proto.net.k2lab.test.grpc.testing.echo.EchoResponse} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.net.k2lab.test.grpc.testing.echo.EchoResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
@@ -483,35 +452,26 @@ proto.net.k2lab.test.grpc.testing.echo.EchoResponse.deserializeBinaryFromReader 
 
 
 /**
- * Class method variant: serializes the given message to binary data
- * (in protobuf wire format), writing to the given BinaryWriter.
- * @param {!proto.net.k2lab.test.grpc.testing.echo.EchoResponse} message
- * @param {!jspb.BinaryWriter} writer
- */
-proto.net.k2lab.test.grpc.testing.echo.EchoResponse.serializeBinaryToWriter = function(message, writer) {
-  message.serializeBinaryToWriter(writer);
-};
-
-
-/**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
 proto.net.k2lab.test.grpc.testing.echo.EchoResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  this.serializeBinaryToWriter(writer);
+  proto.net.k2lab.test.grpc.testing.echo.EchoResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
 
 /**
- * Serializes the message to binary data (in protobuf wire format),
- * writing to the given BinaryWriter.
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.net.k2lab.test.grpc.testing.echo.EchoResponse} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.net.k2lab.test.grpc.testing.echo.EchoResponse.prototype.serializeBinaryToWriter = function (writer) {
+proto.net.k2lab.test.grpc.testing.echo.EchoResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = this.getEcho();
+  f = message.getEcho();
   if (f != null) {
     writer.writeMessage(
       1,
@@ -523,25 +483,16 @@ proto.net.k2lab.test.grpc.testing.echo.EchoResponse.prototype.serializeBinaryToW
 
 
 /**
- * Creates a deep clone of this proto. No data is shared with the original.
- * @return {!proto.net.k2lab.test.grpc.testing.echo.EchoResponse} The clone.
- */
-proto.net.k2lab.test.grpc.testing.echo.EchoResponse.prototype.cloneMessage = function() {
-  return /** @type {!proto.net.k2lab.test.grpc.testing.echo.EchoResponse} */ (jspb.Message.cloneMessage(this));
-};
-
-
-/**
  * optional Echo echo = 1;
- * @return {proto.net.k2lab.test.grpc.testing.echo.Echo}
+ * @return {?proto.net.k2lab.test.grpc.testing.echo.Echo}
  */
 proto.net.k2lab.test.grpc.testing.echo.EchoResponse.prototype.getEcho = function() {
-  return /** @type{proto.net.k2lab.test.grpc.testing.echo.Echo} */ (
+  return /** @type{?proto.net.k2lab.test.grpc.testing.echo.Echo} */ (
     jspb.Message.getWrapperField(this, proto.net.k2lab.test.grpc.testing.echo.Echo, 1));
 };
 
 
-/** @param {proto.net.k2lab.test.grpc.testing.echo.Echo|undefined} value  */
+/** @param {?proto.net.k2lab.test.grpc.testing.echo.Echo|undefined} value */
 proto.net.k2lab.test.grpc.testing.echo.EchoResponse.prototype.setEcho = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
@@ -549,6 +500,15 @@ proto.net.k2lab.test.grpc.testing.echo.EchoResponse.prototype.setEcho = function
 
 proto.net.k2lab.test.grpc.testing.echo.EchoResponse.prototype.clearEcho = function() {
   this.setEcho(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.net.k2lab.test.grpc.testing.echo.EchoResponse.prototype.hasEcho = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -595,10 +555,11 @@ proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.prototype.toObject = f
  *     http://goto/soy-param-migration
  * @param {!proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    limit: msg.getLimit()
+    limit: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -649,35 +610,26 @@ proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.deserializeBinaryFromR
 
 
 /**
- * Class method variant: serializes the given message to binary data
- * (in protobuf wire format), writing to the given BinaryWriter.
- * @param {!proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest} message
- * @param {!jspb.BinaryWriter} writer
- */
-proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.serializeBinaryToWriter = function(message, writer) {
-  message.serializeBinaryToWriter(writer);
-};
-
-
-/**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
 proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  this.serializeBinaryToWriter(writer);
+  proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
 
 /**
- * Serializes the message to binary data (in protobuf wire format),
- * writing to the given BinaryWriter.
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.prototype.serializeBinaryToWriter = function (writer) {
+proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = this.getLimit();
+  f = message.getLimit();
   if (f !== 0) {
     writer.writeInt32(
       1,
@@ -688,26 +640,17 @@ proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.prototype.serializeBin
 
 
 /**
- * Creates a deep clone of this proto. No data is shared with the original.
- * @return {!proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest} The clone.
- */
-proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.prototype.cloneMessage = function() {
-  return /** @type {!proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest} */ (jspb.Message.cloneMessage(this));
-};
-
-
-/**
  * optional int32 limit = 1;
  * @return {number}
  */
 proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.prototype.getLimit = function() {
-  return /** @type {number} */ (jspb.Message.getFieldProto3(this, 1, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
-/** @param {number} value  */
+/** @param {number} value */
 proto.net.k2lab.test.grpc.testing.echo.EchoHistoryRequest.prototype.setLimit = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 

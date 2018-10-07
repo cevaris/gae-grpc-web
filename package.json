@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "dev": "run-p dev:*",
-    "dev:appengine": "cd backend; goapp serve",
+    "dev:appengine": "cd backend; dev_appserver.py $(pwd)",
     "dev:web": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules",
     "dev:proto": "chokidar 'echo/*.proto' --command './build/proto_gen.sh'",
     "clean": "rimraf backend/app",
@@ -19,8 +19,9 @@
     "deploy:appengine": "gcloud -q --project gae-grpc-web app deploy --version 1 backend/app.yaml"
   },
   "dependencies": {
-    "grpc-web-client": "^0.3.1",
     "google-protobuf": "^3.5.0",
+    "grpc-web-client": "^0.3.1",
+    "npm": "^6.4.1",
     "vue": "^2.4.4"
   },
   "browserslist": [
